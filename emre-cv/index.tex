@@ -1,0 +1,81 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[a4paper, total={7in, 10.6in}]{geometry}
+
+\usepackage{array}
+\usepackage{keycommand}
+\usepackage{xcolor}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{lipsum}
+
+\usepackage{tabularx}
+\usepackage{makecell}
+\usepackage{colortbl}
+\usepackage{soul}
+
+\usepackage{titlesec}
+
+\usepackage[document]{ragged2e}
+
+
+\usepackage[
+backend=biber,
+sorting=ynt,
+maxcitenames=4, mincitenames=4,
+maxbibnames=99, minbibnames=99 % <-- or some absurd number 
+]{biblatex}
+\addbibresource{src/publications/articles.bib}
+
+\usepackage{multicol}
+
+
+\usepackage{graphicx}
+\graphicspath{ {./src/images/} }
+\usepackage{wrapfig}
+
+\input{src/variables.tex}
+\input{src/commands.tex}
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{darkblue}}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+
+\titleformat{\subsection}
+  {\normalfont\bfseries\color{darkblue}}{\thesection}{1em}{}[]
+
+  
+\begin{document}
+
+
+\raggedright
+
+
+\begin{center}
+  \huge{\textbf{Mehmet Arif Emre Şen}}
+\end{center}        
+% \begin{multicols}{2} 
+%    \colbreak
+% \end{multicols}
+
+\input{src/sections/personal-info.tex}
+\input{src/sections/languages.tex}
+\input{src/sections/education.tex} 
+\input{src/sections/skills.tex}
+
+
+\pagebreak
+
+\begin{center}
+  % Full name of CV owner
+  \huge{\textbf{Experiences}}
+\end{center}
+\input{src/sections/work-experience.tex}
+  
+\pagebreak
+
+\input{src/sections/publications.tex}
+
+
+
+\end{document}

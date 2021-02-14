@@ -1,0 +1,28 @@
+name: Publisher
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build CV
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: ./
+          root_file: |
+            index.tex
+      - name: Emre CV Build
+        run: |
+          mkdir build
+          cp emre-cv/index.pdf build/cv_mehmet_arif_emre_sen.pdf
+      - name: Burak CV Build
+        run: |
+          mkdir build
+          cp burak-cv/index.pdf build/cv_burak_erkan.pdf
+      - name: GH Pages Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build

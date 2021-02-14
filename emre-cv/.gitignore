@@ -1,0 +1,13 @@
+*.bbl
+*.bcf
+*.blg
+*.aux
+*.run.xml
+*.fdb_latexmk
+*.fls
+*.log
+*.pdf
+*.synctex.gz
+__*
+
+.fuse*
