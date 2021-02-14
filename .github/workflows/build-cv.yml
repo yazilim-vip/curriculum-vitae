@@ -24,6 +24,7 @@ jobs:
           mkdir build
           cp emre-cv/index.pdf build/cv_mehmet_arif_emre_sen.pdf
           cp burak-cv/index.pdf build/cv_burak_erkan.pdf
+          echo "cv.yazilim.vip" > ./build/CNAME
       - name: GH Pages Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
