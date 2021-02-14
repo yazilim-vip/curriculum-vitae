@@ -1,4 +1,4 @@
-name: Publisher
+name: Build CV
 on:
   push:
     branches: [main]
@@ -7,19 +7,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Build CV
+      - name: Emre CV - Build
         uses: xu-cheng/latex-action@v2
         with:
-          working_directory: ./
+          working_directory: ./emre-cv
           root_file: |
             index.tex
-      - name: Emre CV Build
+      - name: Burak CV - Build
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: ./burak-cv
+          root_file: |
+            index.tex
+      - name: Prepare Deployment
         run: |
           mkdir build
           cp emre-cv/index.pdf build/cv_mehmet_arif_emre_sen.pdf
-      - name: Burak CV Build
-        run: |
-          mkdir build
           cp burak-cv/index.pdf build/cv_burak_erkan.pdf
       - name: GH Pages Deploy
         uses: peaceiris/actions-gh-pages@v3
