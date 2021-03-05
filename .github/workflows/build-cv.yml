@@ -7,12 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Emre CV - Build
+      - name: Emre CV - Build (EN)
         uses: xu-cheng/latex-action@v2
         with:
           working_directory: ./emre-cv
           root_file: |
-            index.tex
+            index.en.tex
+            - uses: actions/checkout@v2
+      - name: Emre CV - Build (TR)
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: ./emre-cv
+          root_file: |
+            index.tr.tex
       - name: Burak CV - Build
         uses: xu-cheng/latex-action@v2
         with:
@@ -22,7 +29,8 @@ jobs:
       - name: Prepare Deployment
         run: |
           mkdir build
-          cp emre-cv/index.pdf build/mehmet-arif-emre-sen.pdf
+          cp emre-cv/index.en.pdf build/mehmet-arif-emre-sen-en.pdf
+          cp emre-cv/index.tr.pdf build/mehmet-arif-emre-sen-tr.pdf
           cp burak-cv/index.pdf build/burak-erkan.pdf
           echo "cv.yazilim.vip" > ./build/CNAME
       - name: GH Pages Deploy
