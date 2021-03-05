@@ -13,7 +13,6 @@ jobs:
           working_directory: ./emre-cv
           root_file: |
             index.en.tex
-            - uses: actions/checkout@v2
       - name: Emre CV - Build (TR)
         uses: xu-cheng/latex-action@v2
         with:
