@@ -28,7 +28,7 @@ jobs:
       - name: Prepare Deployment
         run: |
           mkdir build
-          cp emre-cv/index.en.pdf build/mehmet-arif-emre-sen-en.pdf
+          cp emre-cv/index.en.pdf build/mehmet-arif-emre-sen.pdf
           cp emre-cv/index.tr.pdf build/mehmet-arif-emre-sen-tr.pdf
           cp burak-cv/index.pdf build/burak-erkan.pdf
           echo "cv.yazilim.vip" > ./build/CNAME
