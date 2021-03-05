@@ -1,14 +1,42 @@
+\newcommand{\lblWorkExperiences}{\en{Work Experiences}\tr{Çalışma Deneyimleri}}
+\newcommand{\lblWorkExperiencesDate}{\en{Date}\tr{Tarih}}
+\newcommand{\lblWorkExperiencesCompany}{\en{Company}\tr{Şirket}}
+\newcommand{\lblWorkExperiencesPlace}{\en{Place}\tr{Yer}}
+\newcommand{\lblWorkExperiencesGoal}{\en{Goal}\tr{Hedef}}
+\newcommand{\lblWorkExperiencesJobDescription}{\en{Job Description}\tr{İş Tanımı}}
+\newcommand{\lblWorkExperiencesOutcome}{\en{Outcome}\tr{Çıktı}}
+
+
+
+\newcommand{\workExperience}[7]{
+    \CvSectionEntry{#1}{
+        \textbf{\lblWorkExperiencesDate :} #2 \\
+        \textbf{\lblWorkExperiencesCompany :} #3 - \textbf{\lblWorkExperiencesPlace :} #4 \\
+        \textbf{\lblWorkExperiencesGoal :} \\ #5 \\
+        \textbf{\lblWorkExperiencesJobDescription :} \\ #6 \\
+        \textbf{\lblWorkExperiencesOutcome :} \\ #7
+    }
+}
+
+
 \begin{multicols}{2}
-    \en{
-        \CvSection{Work Experiences}{
-            \CvSectionEntry{R\&D Software Engineer}{
-                \textbf{Date:} 07/2018 - 08/2020 (2 year 1 months) \\
-                \textbf{Company:} Cantek Group - \textbf{Place:} Antalya \\
-                \textbf{Goal}: Development of Industrial Control Systems (ICS)
+
+    \CvSection{\lblWorkExperiences}{
+        \workExperience{\en{R \& D Software Engineer}\tr{Arge Yazılım Mühendisi}}{07/2018 - 08/2020 (2 year 1 months)}{Cantek}{Antalya}
+        {
+            \en{
+                Development of Industrial Control Systems (ICS)
                 and Early Warning Systems (EWS) with local device or
                 cloud server based web applications for industrial
-                storage and vertical plant factories. \\
-                \textbf{Job Descirption:} \\
+                storage and vertical plant factories.
+            }
+            \tr{
+                Endüstriyel depolama ve dikey fabrika fabrikaları için lokal
+                cihaz veya bulut sunucu tabanlı web uygulamaları ile Endüstriyel Kontrol Sistemleri (EKS)
+                ve Erken Uyarı Sistemlerinin (EUS) Geliştirilmesi.
+            }
+        }{
+            \en{
                 ICS systems are generally managed autonomously by
                 controller devices consisting of PLC or electronic cards
                 developed with embedded software. By communicating
@@ -28,75 +56,163 @@
                 and apply DevOps using CI/CD Softwares running inside separate Docker containers. \\
                 \textbf{|} Managing source code via GitLab \\
                 \textbf{|} Compiling Spring Boot applications with Maven via Jenkins \\
-                \textbf{|} Serving JARs on the JFrog Artifactory via Jenkins  \\
-                \textbf{Outcome}: A customizable system solution has been provided to solve the problems in the old system and to meet the requirements requested by the users from the old system.
+                \textbf{|} Serving JARs on the JFrog Artifactory via Jenkins
             }
+            \tr{
+                EKS sistemleri, genellikle gömülü yazılım ile geliştirilen PLC veya elektronik kartlardan oluşan
+                denetleyici cihazlar tarafından özerk olarak yönetilir. Denetleyici cihazlar ile haberleşerek gerekli
+                veriler bulut sunucularda mikro servis mimarisi ile tasarlanmış izleme sistemine gönderilir.
+                Bulut ortamında oluşturulan büyük veri kümeleri üzerinden analitik çözümler sunan yazılımlar
+                tasarlamak, yazılım ve gömülü yazılım ekipleri ile geliştirme yapmak. \\
+                \textbf{-} İlişkisel ve NoSQL veritabanlarının kullanılması (PostgreSQL + Cassandra) \\
+                \textbf{-} Spring Boot ile Java Microservislerinin geliştirilmesi
+                (Spring Framework Core, Spring Security ve Spring Cloud Modülleri)
+                ve sunucu üzerinde Docker container'ları içerisinde koşturulması \\
+                \textbf{-} Ubuntu 16.04 Sunucu yönetimi
+                \textbf{-} Git ve GitLab ile versiyon kontrol sistemi \\
+                \textbf{-} Jenkins üzerinden Spring Boot uygulamalarının Maven ile derlenmesi \\
+                \textbf{-} Build edilen JAR'ların  JFrog Artifactory üzerinde deplolanması  \\
+                \textbf{Çıktı}: Eski sistemdeki sorunların giderilmesi ve eski sistemden
+                kullanıcıların talep ettiği ihtiyaçların karşılanması için özelleştirilebilir
+                bir sistem çözümü sunulmuştur.
+            }
+        }{
+            \en{
+                A customizable system solution has been provided to solve the problems in the
+                old system and to meet the requirements requested by the users from the old system.
+            }
+            \tr{
+                Eski sistemdeki sorunların giderilmesi ve eski sistemden
+                kullanıcıların talep ettiği ihtiyaçların karşılanması için özelleştirilebilir
+                bir sistem çözümü sunulmuştur.
+            }
+        }
 
-            \CvSectionEntry{Java Developer}{
-                \textbf{Date:} 06/2016 - 06/2018 (2 year) \\
-                \textbf{Company:} Akdeniz University BAUM - \textbf{Place:} Antalya \\
-                \textbf{Goal:} Implementing a computer-based assessment system for educational assessment. \\
-                \textbf{Job Description:} \\
+        \workExperience{\en{Java Developer}\tr{Java Geliştirici}}{06/2016 - 06/2018 (2 year)}{Akdeniz University BAUM}{Antalya}
+        {
+            \en{
+                Implementing a computer-based assessment system for educational assessment.
+            }
+            \tr{
+                Eğitimsel değerlendirme için bilgisayar tabanlı bir değerlendirme sistemi uygulamak.
+            }
+        }{
+            \en{
                 \textbf{-} Developing Java Web Apps (Spring MVC) with using Spring framework \\
                 \textbf{-} Providing communication between web apps and database
                 over RESTful Service \\
                 \textbf{-} Compiling applications with Maven, sending them to the SVN environment,
-                serving them on the Tomcat Server via Jenkins. \\
-                \textbf{Outcome:} Use of information technology in assessment for educational assessment
+                serving them on the Tomcat Server via Jenkins.
             }
-
+            \tr{
+                \textbf{-} Sprig MVC ile Java Web uygulamaları geliştirilmesi \\
+                \textbf{-} RESTful Servisler üzerinden web uygulamaları ile veritabanı arasında iletişim sağlanması \\
+                \textbf{-} Uygulamaları Maven ile derlemek, SVN ile kod kontrolü sağlamak
+                ve Tomcat Sunucu içerisine Jenkins ile serve etmek.
+            }
+        }{
+            \en{
+                Use of information technology in assessment for educational assessment
+            }
+            \tr{
+                Eğitimsel değerlendirme için bilgi teknolojilerinin kullanımı
+            }
         }
+    }
 
-        \colbreak
+    \colbreak
 
-        \CvSection{Start-Up Projects}{
-            \CvSectionEntry{Yazilim VIP (https://wwww.yazilim.vip)}{
-                \textbf{Date:} 07/2018 - Present \\
+    \CvSection{Start-Up Projects}{
+        \CvSectionEntry{Yazilim VIP (https://wwww.yazilim.vip)}{
+            \textbf{\lblWorkExperiencesDate :} 07/2018 - Present \\
+            \en{
                 To keep this platform open to everyone who is
                 competent and willing to share what we call an open
                 source world. A platform aimed at presenting our
                 competencies to the open source world without waiting
                 for a response.
             }
+            \tr{
+                Bu platformu yetkin ve açık kaynaklı dünya dediğimiz şeyi paylaşmaya istekli herkese açık tutmak.
+                Yetkinliklerimizi yanıt beklemeden açık kaynak dünyasına sunmayı amaçlayan bir platform.
+            }
         }
+    }
 
-        \CvSection{Open-Source Projects}{
+    \CvSection{Open-Source Projects}{
+        \en{
             Check my GitHub for my other Open-Source projects \\
             \textbf{https://github.com/maemresen}
+        }
+        \tr{
+            Diğer Açık Kaynak projelerim için GitHub'ımı kontrol edebilirsiniz \\
+            \textbf{https://github.com/maemresen}
+        }
 
-            \CvSectionEntry{Spring VIP}{
+        \CvSectionEntry{Spring VIP}{
+            \en{
                 \textbf{Link:} https://springvip.yazilim.vip/ \\
                 A Java Spring Library that provides helpful generic and utility classes. Some of the features provided by the library are
                 generic CRUD Service and Rest controllers. maescript
             }
-            \CvSectionEntry{Maescript}{
+            \tr{
+                \textbf{Link:} https://springvip.yazilim.vip/ \\
+                Yararlı genel ve yardımcı sınıflar sağlayan bir Java Spring kütüphanesi.
+                Kütüphane tarafından sağlanan özelliklerden bazıları genel CRUD
+                Servisi ve Rest Controller'dır.
+            }
+        }
+        \CvSectionEntry{Maescript}{
+            \en{
                 \textbf{Link:} https://yazilim-vip.github.io/maescript/ \\
                 A very useful set of Linux commands
             }
-            \CvSectionEntry{React HowTo}{
+            \tr{
+                \textbf{Link:} https://yazilim-vip.github.io/maescript/ \\
+                Kullanışlı Linux komutları
+            }
+        }
+        \CvSectionEntry{React HowTo}{
+            \en{
                 \textbf{Link:} https://github.com/yazilim-vip/howto-react \\
                 Reusable component library for ReactJS
             }
+            \tr{
+                \textbf{Link:} https://github.com/yazilim-vip/howto-react \\
+                ReactJS için yeniden kullanılabilir component kitaplığı
+            }
         }
+    }
 
-        \CvSection{Side Projects}{
-            \CvSectionEntry{IconConference2017 Website}{
+    \CvSection{Side Projects}{
+        \CvSectionEntry{IconConference2017 Website}{
+            \en{
                 Custom-designed WordPress theme for the customer.
                 The theme also includes a basic file upload mechanism. The theme was used for IconConference 2017 conference website.
             }
+            \tr{
+                Müşteri için özel olarak tasarlanmış WordPress teması.
+                Tema ayrıca basit bir dosya yükleme mekanizması içerir.
+                Tema, IconConference 2017 konferans web sitesi için kullanılmıştır.
+            }
         }
+    }
 
-        \CvSection{Senior Design Project}{
-            \CvSectionEntry{
-                Face Recognition based \\
-                Class Attendance Tracking System
-            }{
+    \CvSection{Senior Design Project}{
+        \CvSectionEntry{\en{Face Recognition based \\ Class Attendance Tracking System}\tr{Yüz Tanımı tanımlı Sınıf Yoklama Takip Sistemi}}{
+            \en{
                 The main motivaton of that project is creating a platform which makes use
                 able to both taking and tracking attendance digitally without wasting time.
             }
+            \tr{
+                Bu projenin temel motivasyonu, zaman kaybetmeden katılımı dijital olarak hem almayı
+                hem de takip etmeyi sağlayan bir platform oluşturmaktır.
+            }
         }
+    }
 
 
+    \en{
         \CvSection{Attended Organizations}{
             \textbf{GDG 2019 :} Participant \\
             \textbf{ICAIME 2019 :} Participant \\
@@ -107,92 +223,6 @@
     }
 
     \tr{
-        \CvSection{Çalışma Deneyimleri}{
-            \CvSectionEntry{Ar-Ge Yazılım Mühendisi}{
-                \textbf{Tarih:} 07/2018 - 08/2020 (2 yıl 1 ay) \\
-                \textbf{Şirket:} Cantek Group - \textbf{Yer:} Antalya \\
-                \textbf{Hedef}: Endüstriyel depolama ve dikey fabrika fabrikaları için lokal 
-                cihaz veya bulut sunucu tabanlı web uygulamaları ile Endüstriyel Kontrol Sistemleri (EKS)
-                ve Erken Uyarı Sistemlerinin (EUS) Geliştirilmesi. \\
-                \textbf{İş Tanımı:} \\
-                EKS sistemleri, genellikle gömülü yazılım ile geliştirilen PLC veya elektronik kartlardan oluşan 
-                denetleyici cihazlar tarafından özerk olarak yönetilir. Denetleyici cihazlar ile haberleşerek gerekli 
-                veriler bulut sunucularda mikro servis mimarisi ile tasarlanmış izleme sistemine gönderilir. 
-                Bulut ortamında oluşturulan büyük veri kümeleri üzerinden analitik çözümler sunan yazılımlar 
-                tasarlamak, yazılım ve gömülü yazılım ekipleri ile geliştirme yapmak. \\
-                \textbf{-} İlişkisel ve NoSQL veritabanlarının kullanılması (PostgreSQL + Cassandra) \\
-                \textbf{-} Spring Boot ile Java Microservislerinin geliştirilmesi
-                (Spring Framework Core, Spring Security ve Spring Cloud Modülleri)
-                ve sunucu üzerinde Docker container'ları içerisinde koşturulması \\
-                \textbf{-} Ubuntu 16.04 Sunucu yönetimi
-                \textbf{-} Git ve GitLab ile versiyon kontrol sistemi \\
-                \textbf{-} Jenkins üzerinden Spring Boot uygulamalarının Maven ile derlenmesi \\
-                \textbf{-} Build edilen JAR'ların  JFrog Artifactory üzerinde deplolanması  \\
-                \textbf{Çıktı}: Eski sistemdeki sorunların giderilmesi ve eski sistemden 
-                kullanıcıların talep ettiği ihtiyaçların karşılanması için özelleştirilebilir 
-                bir sistem çözümü sunulmuştur.
-            }
-
-            \CvSectionEntry{Java Geliştirici}{
-                \textbf{Tarih:} 06/2016 - 06/2018 (2 yıl) \\
-                \textbf{Şirket:} Akdeniz University BAUM - \textbf{Yer:} Antalya \\
-                \textbf{Hedef:} Eğitimsel değerlendirme için bilgisayar tabanlı bir değerlendirme sistemi uygulamak. \\
-                \textbf{İş Tanımı:} \\
-                \textbf{-} Sprig MVC ile Java Web uygulamaları geliştirilmesi \\
-                \textbf{-} RESTful Servisler üzerinden web uygulamaları ile veritabanı arasında iletişim sağlanması \\
-                \textbf{-} Uygulamaları Maven ile derlemek, SVN ile kod kontrolü sağlamak
-                ve Tomcat Sunucu içerisine Jenkins ile serve etmek. \\
-                \textbf{Çıktı:} Eğitimsel değerlendirme için bilgi teknolojilerinin kullanımı
-            }
-        }
-
-        \colbreak
-
-        \CvSection{Start-Up Projeler}{
-            \CvSectionEntry{Yazilim VIP (https://wwww.yazilim.vip)}{
-                \textbf{Tarih:} 07/2018 - Şu An \\
-                Bu platformu yetkin ve açık kaynaklı dünya dediğimiz şeyi paylaşmaya istekli herkese açık tutmak. 
-                Yetkinliklerimizi yanıt beklemeden açık kaynak dünyasına sunmayı amaçlayan bir platform.
-            }
-        }
-
-        \CvSection{Açık Kaynak Kodlu Projeler}{
-            Diğer Açık Kaynak projelerim için GitHub'ımı kontrol edebilirsiniz \\
-            \textbf{https://github.com/maemresen}
-
-            \CvSectionEntry{Spring VIP}{
-                \textbf{Link:} https://springvip.yazilim.vip/ \\
-                Yararlı genel ve yardımcı sınıflar sağlayan bir Java Spring kütüphanesi. 
-                Kütüphane tarafından sağlanan özelliklerden bazıları genel CRUD 
-                Servisi ve Rest Controller'dır.
-            }
-            \CvSectionEntry{Maescript}{
-                \textbf{Link:} https://yazilim-vip.github.io/maescript/ \\
-                Kullanışlı Linux komutları
-            }
-            \CvSectionEntry{React HowTo}{
-                \textbf{Link:} https://github.com/yazilim-vip/howto-react \\
-                ReactJS için yeniden kullanılabilir component kitaplığı
-            }
-        }
-
-        \CvSection{Yan Projeler}{
-            \CvSectionEntry{IconConference2017 Websayfası}{
-                Müşteri için özel olarak tasarlanmış WordPress teması.
-                Tema ayrıca basit bir dosya yükleme mekanizması içerir. 
-                Tema, IconConference 2017 konferans web sitesi için kullanılmıştır.
-            }
-        }
-
-        \CvSection{Bitirme Projesi}{
-            \CvSectionEntry{
-                Yüz Tanımı tanımlı Sınıf Yoklama Takip Sistemi
-            }{
-                Bu projenin temel motivasyonu, zaman kaybetmeden katılımı dijital olarak hem almayı
-                hem de takip etmeyi sağlayan bir platform oluşturmaktır.
-            }
-        }
-
         \CvSection{Katılınılan Etkinlikler}{
             \textbf{GDG 2019 :} Katılımcı \\
             \textbf{ICAIME 2019 :} Katılımcı \\
